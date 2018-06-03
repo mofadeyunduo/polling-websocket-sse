@@ -29,7 +29,7 @@ Sec-WebSocket-Protocol: v10.stomp
 - HandshakeInterceptor，配置 WebSocket 连接建立之前、之后的处理
 - ServletServerContainerFactoryBean，配置 WebSocket 信息大小等限制
 
-## ref
+## Ref
 
 [Spring WebSocket doc](https://docs.spring.io/spring/docs/5.0.6.RELEASE/spring-framework-reference/web.html#websocket)
 
