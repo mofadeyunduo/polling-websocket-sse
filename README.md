@@ -7,7 +7,7 @@
 - Easy
 - HTTP basic, load balance compatibility good
 - Make a lot of request, including lot of HTTP header (wasteful)
-- No need manage connections
+- No need to manage connections
 - Simplex
 
 ### Long Polling 
@@ -15,7 +15,7 @@
 - Easy
 - HTTP basic, load balance compatibility good
 - Make one request, but server will hold connection (less wasteful)
-- Need manage connections
+- Need to manage connections
 - Simplex
 
 ### SSE
@@ -31,7 +31,7 @@
 - Hard
 - Handshake by HTTP, next ws tunnel, **load balance compatibility bad**
 - Server push, without HTTP header (more saving)
-- Need manage connections
+- Need manage to connections
 - Duplex
 
 ## SSE 
