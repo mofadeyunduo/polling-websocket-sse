@@ -1,6 +1,46 @@
-# WebSocket
+# Server Push
 
-## Req & Res for begin
+# Compare 
+
+### Short Polling
+
+- Easy
+- HTTP basic, load balance compatibility good
+- Make a lot of request, including lot of HTTP header (wasteful)
+- No need manage connections
+- Simplex
+
+### Long Polling 
+
+- Easy
+- HTTP basic, load balance compatibility good
+- Make one request, but server will hold connection (less wasteful)
+- Need manage connections
+- Simplex
+
+### SSE
+
+- Normal
+- HTTP basic, load balance compatibility good
+- Server push (saving)
+- Auto manage connections
+- Simplex
+
+### WS
+
+- Hard
+- Handshake by HTTP, next ws tunnel, **load balance compatibility bad**
+- Server push, without HTTP header (more saving)
+- Need manage connections
+- Duplex
+
+## SSE 
+
+TDB.
+
+## WebSocket
+
+### Req & Res for begin
 
 ```html
 GET /spring-websocket-portfolio/portfolio HTTP/1.1
@@ -21,7 +61,7 @@ Sec-WebSocket-Accept: 1qVdfYHU9hPOl4JYYNXF623Gzn0=
 Sec-WebSocket-Protocol: v10.stomp
 ```
 
-## Spring extensions
+### Spring extensions
 
 - @EnableWebSocket，启用 WebSocket
 - WebSocketConfigurer，配置 WebSocket
@@ -29,7 +69,7 @@ Sec-WebSocket-Protocol: v10.stomp
 - HandshakeInterceptor，配置 WebSocket 连接建立之前、之后的处理
 - ServletServerContainerFactoryBean，配置 WebSocket 信息大小等限制
 
-## Ref
+# Ref
 
 [Spring WebSocket doc](https://docs.spring.io/spring/docs/5.0.6.RELEASE/spring-framework-reference/web.html#websocket)
-
+[Server push comparision](https://blog.stanko.io/do-you-really-need-websockets-343aed40aa9b)

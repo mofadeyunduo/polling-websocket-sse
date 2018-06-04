@@ -17,7 +17,7 @@ import java.util.Map;
 
 public class SimpleWSHandler extends TextWebSocketHandler {
 
-    public static final String ID = "id";
+    private static final String ID = "id";
     private static final List<WebSocketSession> COUNTS = new ArrayList<>();
 
     @Override
