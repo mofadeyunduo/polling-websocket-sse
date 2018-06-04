@@ -73,4 +73,4 @@ Sec-WebSocket-Protocol: v10.stomp
 
 [Spring WebSocket doc](https://docs.spring.io/spring/docs/5.0.6.RELEASE/spring-framework-reference/web.html#websocket)
 
-[Server push comparision](https://blog.stanko.io/do-you-really-need-websockets-343aed40aa9b)
+[Server Push comparision](https://blog.stanko.io/do-you-really-need-websockets-343aed40aa9b)
