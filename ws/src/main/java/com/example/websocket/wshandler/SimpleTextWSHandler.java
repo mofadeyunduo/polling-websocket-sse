@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class SimpleWSHandler extends TextWebSocketHandler {
+public class SimpleTextWSHandler extends TextWebSocketHandler {
 
     private static final String ID = "id";
     private static final List<WebSocketSession> COUNTS = new ArrayList<>();

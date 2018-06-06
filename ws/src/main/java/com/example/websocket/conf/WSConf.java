@@ -1,6 +1,6 @@
 package com.example.websocket.conf;
 
-import com.example.websocket.wshandler.SimpleWSHandler;
+import com.example.websocket.wshandler.SimpleTextWSHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
@@ -15,12 +15,12 @@ public class WSConf implements WebSocketConfigurer {
     public void registerWebSocketHandlers(WebSocketHandlerRegistry webSocketHandlerRegistry) {
         webSocketHandlerRegistry
                 .addHandler(counterHandler(), "/hello")
-                .addInterceptors(new SimpleWSHandler.CountHandshakeInterceptor());
+                .addInterceptors(new SimpleTextWSHandler.CountHandshakeInterceptor());
     }
 
     @Bean
-    public SimpleWSHandler counterHandler() {
-        return new SimpleWSHandler();
+    public SimpleTextWSHandler counterHandler() {
+        return new SimpleTextWSHandler();
     }
 
 }
