@@ -1,5 +1,10 @@
 # Server Push
 
+# Purpose
+
+- Compare Server Push technologies
+- Solve Load Balance questions in Server Push
+
 # Compare 
 
 ### Short Polling
@@ -112,3 +117,19 @@ Sec-WebSocket-Protocol: v10.stomp
 [Server Push comparision](https://blog.stanko.io/do-you-really-need-websockets-343aed40aa9b)
 
 [Spring WebSocket guide](http://spring.io/guides/gs/messaging-stomp-websocket)
+
+## Server Push Load Balance questions
+
+### Bug
+
+前提：服务器A、服务器B、网页客户端A、手机客户端B
+
+假设请求是扫码登录请求
+
+- 进入用户登录页面，服务器 A 和网页客户端 A 建立 Server Push 连接（WS、SSE）
+- 用户手机扫码，确认登录，发出登录请求，手机客户端 B 向服务器 B 发出登录请求
+- 服务器 B 确认登录请求，由于 Server Push 连接是在服务器 A 上，服务器 B 无法推送消息到网页客户端 A  
+
+### Solution
+
+TDB
