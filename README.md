@@ -70,6 +70,24 @@ Sec-WebSocket-Protocol: v10.stomp
 - HandshakeInterceptor，配置 WebSocket 连接建立之前、之后的处理
 - ServletServerContainerFactoryBean，配置 WebSocket 信息大小等限制
 
+### STOMP
+
+#### Procedure
+
+- 建立 WS
+- 建立 STOMP 客户端
+- 客户端订阅服务端推送主题
+- 客户端向服务端订阅的主题发布消息
+- 服务端订阅客户端推送主题
+- 服务端向客户端订阅的主题发布消息
+
+#### Usage
+
+- WebSocketMessageBrokerConfigurer，STOMP 配置
+- @EnableWebSocketMessageBroker，启用 STOMP
+- @MessageMapping，客户端发布消息，服务端订阅主题
+- @SendTo，客户端订阅主题，服务端发布消息
+
 # Ref
 
 [Spring WebSocket doc](https://docs.spring.io/spring/docs/5.0.6.RELEASE/spring-framework-reference/web.html#websocket)
