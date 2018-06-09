@@ -33,6 +33,7 @@
 - Server push, without HTTP header (more saving)
 - Need manage to connections
 - Duplex
+- It is the combination of low latency, high frequency and high volume that make the best case for the use WebSocket
 
 ## SSE 
 
@@ -74,3 +75,5 @@ Sec-WebSocket-Protocol: v10.stomp
 [Spring WebSocket doc](https://docs.spring.io/spring/docs/5.0.6.RELEASE/spring-framework-reference/web.html#websocket)
 
 [Server Push comparision](https://blog.stanko.io/do-you-really-need-websockets-343aed40aa9b)
+
+[Spring WebSocket guide](http://spring.io/guides/gs/messaging-stomp-websocket)
