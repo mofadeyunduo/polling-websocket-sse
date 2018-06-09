@@ -18,7 +18,7 @@
 - Need to manage connections
 - Simplex
 
-### SSE
+### Sse
 
 - Normal
 - HTTP basic, load balance compatibility good
@@ -35,11 +35,28 @@
 - Duplex
 - It is the combination of low latency, high frequency and high volume that make the best case for the use WebSocket
 
-## SSE 
+## Sse
 
-TDB.
+### Define
 
-## WebSocket
+Server-sent Event
+
+### Procedure
+
+- Generated SseEmitter
+- Register SseEmitter Event
+- Save SseEmitter for other programs
+- Return SseEmitter in Controller
+
+### Ref
+
+[Sse Spring](https://www.jeejava.com/server-sent-events-spring-push-notifications/)
+
+## WS
+
+### Define
+
+WebSocket
 
 ### Req & Res for begin
 
@@ -88,7 +105,7 @@ Sec-WebSocket-Protocol: v10.stomp
 - @MessageMapping，客户端发布消息，服务端订阅主题
 - @SendTo，客户端订阅主题，服务端发布消息
 
-# Ref
+### Ref
 
 [Spring WebSocket doc](https://docs.spring.io/spring/docs/5.0.6.RELEASE/spring-framework-reference/web.html#websocket)
 
